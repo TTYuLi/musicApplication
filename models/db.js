@@ -1,11 +1,12 @@
+const config = require('../config')
 // 引入数据库对象
 const mysql = require('mysql')
 const pool = mysql.createPool({
-  connectionLimit: 10,
-  host: '127.0.0.1',
-  user: 'root',
-  password: 'ztw526',
-  database: 'node_music'
+  connectionLimit: config.db_connectionLimit,
+  host: config.db_host,
+  user: config.db_user,
+  password: config.db_password,
+  database: config.db_database
 })
 
 
